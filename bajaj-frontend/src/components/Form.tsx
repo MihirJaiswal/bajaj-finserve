@@ -34,7 +34,7 @@ export default function FormData() {
       const parsedInput = JSON.parse(jsonInput);
 
       // Make POST request to the backend
-      const response = await axios.post<ApiResponse>('http://localhost:3000/bfhl', parsedInput);
+      const response = await axios.post<ApiResponse>('https://bajaj-backend-1-qa8m.onrender.com/bfhl/', parsedInput);
       setResponseData(response.data);
     } catch (err) {
       if (err instanceof SyntaxError) {
